@@ -1,20 +1,27 @@
 :root {
+  /* Dark Theme (Default) */
   --bg-primary: #121212;
   --bg-secondary: #1e1e1e;
   --text-primary: #e0e0e0;
   --text-secondary: #b0b0b0;
-  --accent-cyan: #19415b;
+  --accent-cyan: #026c7a;
   --accent-green: #20ad7e;
   --code-bg: #0a1929;
   --shadow: rgba(0, 0, 0, 0.3);
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] {
-  --bg-primary: #fafafa;
+  /* Light Theme */
+  --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
-  --text-primary: #333333;
+  --text-primary: #1a1a1a;
   --text-secondary: #666666;
+  --accent-cyan: #045d9c;
+  --accent-green: #158c5f;
+  --code-bg: #f1f5f9;
   --shadow: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -241,8 +248,8 @@ body {
   gap: 2.5rem;
   margin: 2.5rem 0;
   padding: 1.5rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .stat {
@@ -365,7 +372,7 @@ body {
 .hero-tech-stack {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-color);
 }
 
 .tech-label {
@@ -388,12 +395,12 @@ body {
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   font-size: 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .tech-icon:hover {
@@ -616,7 +623,6 @@ body {
   border-radius: 2px;
 }
 
-/* About Section */
 /* Enhanced About Section */
 .about-content {
   display: grid;
@@ -664,6 +670,18 @@ body {
   animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .about-description p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -682,7 +700,7 @@ body {
   padding: 2rem;
   background: var(--bg-secondary);
   border-radius: 20px;
-  border: 1px solid rgba(0, 217, 247, 0.1);
+  border: 1px solid var(--border-color);
 }
 
 .tech-showcase h4 {
@@ -762,7 +780,7 @@ body {
   border-radius: 20px;
   text-align: center;
   box-shadow: 0 20px 40px var(--shadow);
-  border: 1px solid rgba(0, 217, 247, 0.2);
+  border: 1px solid var(--border-color);
   z-index: 2;
   transition: all 0.3s ease;
 }
@@ -840,7 +858,7 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   box-shadow: 0 10px 25px var(--shadow);
-  border: 1px solid rgba(0, 217, 247, 0.1);
+  border: 1px solid var(--border-color);
   animation: floatCard 6s ease-in-out infinite;
   z-index: 1;
 }
@@ -890,86 +908,6 @@ body {
   }
 }
 
-/* Responsive Design */
-@media (max-width: 968px) {
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-
-  .title-wrapper h3 {
-    font-size: 2rem;
-  }
-
-  .tech-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .visual-container {
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    gap: 2rem;
-  }
-
-  .title-wrapper h3 {
-    font-size: 1.8rem;
-  }
-
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-cta {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-cta .btn {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .main-card {
-    padding: 2rem;
-  }
-
-  .floating-card {
-    padding: 0.6rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title-wrapper h3 {
-    font-size: 1.5rem;
-  }
-
-  .tech-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tech-showcase {
-    padding: 1.5rem;
-  }
-
-  .main-card {
-    padding: 1.5rem;
-  }
-
-  .code-symbol {
-    font-size: 2.5rem;
-  }
-
-  .floating-card {
-    display: none;
-  }
-}
-
 /* Skills Section */
 .skills-grid {
   display: grid;
@@ -983,6 +921,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 5px 15px var(--shadow);
   transition: transform 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .skill-category:hover {
@@ -1040,6 +979,7 @@ body {
   overflow: hidden;
   box-shadow: 0 5px 15px var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .project-card:hover {
@@ -1133,6 +1073,7 @@ body {
   background: var(--bg-secondary);
   border-radius: 10px;
   transition: transform 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .contact-item:hover {
@@ -1171,7 +1112,7 @@ body {
 .form-group input,
 .form-group textarea {
   padding: 0.75rem;
-  border: 1px solid var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   background-color: var(--bg-secondary);
   color: var(--text-primary);
@@ -1192,7 +1133,7 @@ body {
   background-color: var(--bg-secondary);
   padding: 2rem 0;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border-color);
 }
 
 .social-links {
@@ -1258,6 +1199,24 @@ body {
     width: 370px;
     height: 370px;
   }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .title-wrapper h3 {
+    font-size: 2rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .visual-container {
+    height: 300px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1310,6 +1269,37 @@ body {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .title-wrapper h3 {
+    font-size: 1.8rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-cta .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .main-card {
+    padding: 2rem;
+  }
+
+  .floating-card {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1349,5 +1339,29 @@ body {
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .title-wrapper h3 {
+    font-size: 1.5rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-showcase {
+    padding: 1.5rem;
+  }
+
+  .main-card {
+    padding: 1.5rem;
+  }
+
+  .code-symbol {
+    font-size: 2.5rem;
+  }
+
+  .floating-card {
+    display: none;
   }
 }
