@@ -40,7 +40,11 @@ const About = () => {
             </div>
 
             <div className="about-cta">
-              <a href="/resume.pdf" download className="btn btn-primary">
+              <a
+                href="/Kashif-Hussain.pdf"
+                download
+                className="btn btn-primary"
+              >
                 <span className="btn-icon">📄</span>
                 Download Resume
               </a>
