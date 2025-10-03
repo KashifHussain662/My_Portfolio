@@ -46,28 +46,51 @@ const Hero = () => {
             <div className="graphic-container">
               <div className="graphic-main">
                 <div className="initials">KH</div>
-                <div className="graphic-ring"></div>
+                <div className="graphic-ring graphic-ring-1"></div>
+                <div className="graphic-ring graphic-ring-2"></div>
+                <div className="graphic-ring graphic-ring-3"></div>
               </div>
-              <div className="graphic-orbits">
-                <div className="orbit orbit-1">
+
+              {/* Orbiting Elements */}
+              <div className="orbiting-elements">
+                <div className="orbit-item orbit-item-1">
                   <div className="orbit-icon">🚀</div>
                 </div>
-                <div className="orbit orbit-2">
+                <div className="orbit-item orbit-item-2">
                   <div className="orbit-icon">💻</div>
                 </div>
-                <div className="orbit orbit-3">
+                <div className="orbit-item orbit-item-3">
                   <div className="orbit-icon">📱</div>
                 </div>
-                <div className="orbit orbit-4">
+                <div className="orbit-item orbit-item-4">
                   <div className="orbit-icon">⭐</div>
                 </div>
+                <div className="orbit-item orbit-item-5">
+                  <div className="orbit-icon">⚡</div>
+                </div>
+                <div className="orbit-item orbit-item-6">
+                  <div className="orbit-icon">🔧</div>
+                </div>
               </div>
-              <div className="graphic-particles">
-                <div className="particle"></div>
-                <div className="particle"></div>
-                <div className="particle"></div>
-                <div className="particle"></div>
-                <div className="particle"></div>
+
+              {/* Animated Circles */}
+              <div className="animated-circles">
+                <div className="circle circle-1"></div>
+                <div className="circle circle-2"></div>
+                <div className="circle circle-3"></div>
+                <div className="circle circle-4"></div>
+              </div>
+
+              {/* Floating Particles */}
+              <div className="floating-particles">
+                <div className="particle particle-1"></div>
+                <div className="particle particle-2"></div>
+                <div className="particle particle-3"></div>
+                <div className="particle particle-4"></div>
+                <div className="particle particle-5"></div>
+                <div className="particle particle-6"></div>
+                <div className="particle particle-7"></div>
+                <div className="particle particle-8"></div>
               </div>
             </div>
           </div>

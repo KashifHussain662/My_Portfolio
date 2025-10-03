@@ -8,7 +8,7 @@ const Projects = () => {
         "Cross-platform document management system with web (React.js) and Android (React Native) apps. Features include document scanning, sharing, password protection, and real-time chat.",
       technologies: ["React Native", "React.js", "Firebase", "JavaScript"],
       github: "https://github.com/KashifHussain662",
-      demo: "#",
+      // demo: "#",
       icon: "📁",
     },
     {
@@ -17,7 +17,7 @@ const Projects = () => {
         "Full-stack e-commerce platform with customer and admin panels. Built with React.js, Tailwind CSS, and Firebase for authentication and database.",
       technologies: ["React.js", "Tailwind CSS", "Firebase", "Vite"],
       github: "https://github.com/KashifHussain662",
-      demo: "#",
+      demo: "https://alveenluxe.netlify.app/",
       icon: "🛒",
     },
     {
@@ -26,7 +26,7 @@ const Projects = () => {
         "Web-based platform connecting clients with lawyers. Features include appointment booking, search by specialization, and admin panel for management.",
       technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       github: "https://github.com/KashifHussain662/2nd_Semester_eproject",
-      demo: "#",
+      // demo: "#",
       icon: "⚖️",
     },
   ];
