@@ -20,7 +20,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <nav className="nav">
-          <div className="logo">Kashif Hussain</div>
+          <h3 className="footer-title">
+            Kashif <span className="footer-accent">Hussain</span>
+          </h3>{" "}
           <ul className="nav-links">
             <li>
               <a href="#home">Home</a>
